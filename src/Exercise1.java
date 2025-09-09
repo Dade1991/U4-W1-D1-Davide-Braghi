@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercise1 {
@@ -13,7 +14,9 @@ public class Exercise1 {
         System.out.println("Ciao, inserisci il secondo numero:");
         int num2 = Integer.parseInt(scannerTool.nextLine());
 
-        System.out.println("La moltiplicazione dei due numeri è: " + (num1 * num2));
+        double multiplyResult = multiply(num1, num2);
+
+        System.out.println("La moltiplicazione dei due numeri è: " + multiplyResult);
 
 
         System.out.println("_____ Exercise 1.2");
@@ -23,7 +26,9 @@ public class Exercise1 {
         System.out.println("Inserisci un numero:");
         int yourNum = Integer.parseInt(scannerTool.nextLine());
 
-        System.out.println("La concatenazione risulta: " + yourStr + " " + yourNum);
+        String stringPlusNumberResult = stringPlusNumber(yourStr, yourNum);
+
+        System.out.println("La concatenazione risulta: " + stringPlusNumberResult);
 
 
         System.out.println("_____ Exercise 1.3");
@@ -43,8 +48,20 @@ public class Exercise1 {
         newArrayOfStr[5] = arrayOfStr[4];
         scannerTool.close();
 
-        System.out.println("Ecco il nuovo array di 6 elementi: " + newArrayOfStr);
+        System.out.println("Ecco il nuovo array di 6 elementi: " + Arrays.toString(newArrayOfStr));
 
         scannerTool.close();
     }
+
+    public static double multiply(double num1, double num2) {
+
+        return num1 * num2;
+    }
+
+    public static String stringPlusNumber(String yourStr, int yourNum) {
+
+        return (yourStr + yourNum);
+    }
+
+    public static String[]
 }
